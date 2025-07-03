@@ -11,7 +11,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(-45deg, #c39dcc, #a1c4fd, #d4fc79, #96e6a1);
+  background: linear-gradient(-45deg, #d499e1, #a1c4fd, #d4fc79, #96e6a1);
   background-size: 400% 400%;
   animation: gradientBG 15s ease infinite;
   font-family: Arial, sans-serif;
@@ -29,3 +29,4 @@ body {
     background-position: 0% 50%;
   }
 }
+/* commit test */
