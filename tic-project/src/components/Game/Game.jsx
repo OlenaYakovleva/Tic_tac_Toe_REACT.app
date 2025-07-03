@@ -46,23 +46,21 @@ export function Game() {
             
             
            </GameTurn>
-        <div className={styles.board}>
-          {gameBoard.map((cell, index) => {
-            return (
-              <div
-                key={index}
-                className={`${styles.cell} ${
-                    cell === "X"
-                      ? `${styles["x-mark"]}`
-                      : `${styles["o-mark"]} ${
-                          winner?.combination.includes(index) ? "winner" : ""
-                        }`
-                  }`}
-                onClick={() => handlerClickCell(index)}
-              >
-                {cell}
-              </div>
-            );
+           <div className={styles.board}>
+        {gameBoard.map((cell, index) => {
+          return (
+            <div
+              key={index}
+              className={`${styles.cell} ${
+                cell === "X" ? `${styles["x-mark"]}` : `${styles["o-mark"]}`
+              } ${
+                winner?.combination.includes(index) ? `${styles.winner}` : ""
+              }`}
+              onClick={() => handlerClickCell(index)}
+            >
+              {cell}
+            </div>
+          );
           })}
         </div>
         <button className = {styles.reset} onClick={resetGame}>
